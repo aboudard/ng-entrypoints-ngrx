@@ -2,6 +2,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@cit/ng-core": [
+        "dist/cit/ng-core/cit-ng-core",
+        "dist/cit/ng-core"
+      ],
+      "@cit/ng-core/*": [
+        "dist/cit/ng-core/*"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
