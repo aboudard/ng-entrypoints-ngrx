@@ -1,26 +1,45 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 
-import { concatMap } from 'rxjs/operators';
+import { catchError, concatMap, map, switchMap } from 'rxjs/operators';
 import { Observable, EMPTY } from 'rxjs';
 
 import * as OrdersActions from './orders.actions';
+import { OrdersService } from '../services/orders.service';
 
 
 @Injectable()
 export class OrdersEffects {
 
 
-  loadOrderss$ = createEffect(() => {
+  loadOrders$ = createEffect(() => {
     return this.actions$.pipe( 
 
-      ofType(OrdersActions.loadOrderss),
-      /** An EMPTY observable only emits completion. Replace with your own observable API request */
-      concatMap(() => EMPTY as Observable<{ type: string }>)
+      ofType(OrdersActions.getOrders),
+      /* map(action => OrdersActions.loadOrders({ orders: [
+        {
+          id: 1,
+          orderNumber: '123',
+          orderDate: new Date()
+        },
+        {
+          id: 2,
+          orderNumber: '456',
+          orderDate: new Date()
+        }
+      ] })), */
+      switchMap(() => this.ordersService.getOrders()
+        .pipe(
+          map((orders) => OrdersActions.loadOrders({ orders })),
+          catchError(() => EMPTY as Observable<{ type: string }>)
+        ))
     );
   });
 
 
-  constructor(private actions$: Actions) {}
+  constructor(
+    private actions$: Actions,
+    private ordersService: OrdersService
+    ) {}
 
 }

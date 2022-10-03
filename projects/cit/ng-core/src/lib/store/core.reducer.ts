@@ -4,11 +4,12 @@ import * as CoreActions from './core.actions';
 export const coreFeatureKey = 'core';
 
 export interface State {
+  appId: string;
 
 }
 
 export const initialState: State = {
-
+  appId: 'ng-core'
 };
 
 export const reducer = createReducer(
