@@ -8,7 +8,7 @@ export class NgCoreService {
   constructor() { }
 
   getInfo(): string {
-    return 'Hello from core service';
+    return 'Hello from ng core service';
   }
 
 }

@@ -1,1 +1,6 @@
 <p>orders works!</p>
+<ul>
+    <li *ngFor="let order of (orders$ | async)">
+        <a [routerLink]="['/order', order.id]">{{order.orderNumber}}</a>
+    </li>
+</ul>

@@ -1,14 +1,15 @@
 import { Action, createReducer, on } from '@ngrx/store';
+import { Order } from '../dto/order';
 import * as OrdersActions from './orders.actions';
 
 export const ordersFeatureKey = 'orderstore';
 
 export interface State {
-
+  orders: Order[];
 }
 
 export const initialState: State = {
-
+  orders: []
 };
 
 export const reducer = createReducer(
