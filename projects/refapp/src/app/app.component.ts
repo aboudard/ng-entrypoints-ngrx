@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { selectOrdersCount } from '@cit/ng-core/orders';
+import { Book } from '@cit/ng-core/books';
+import { getOrders, selectOrdersCount } from '@cit/ng-core/orders';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -12,7 +13,8 @@ export class AppComponent {
   
   title = 'refapp';
   count$?: Observable<number>;
-  //count$ = this.store.select(selectOrdersCount);
+  book: Book;
+  // count$ = this.store.select(selectOrdersCount);
   
   constructor(
     private store: Store
@@ -22,6 +24,10 @@ export class AppComponent {
     /* this.store.select(selectOrdersCount).subscribe(orders => {
       console.log(orders);
     }); */
+    this.book = {
+      id: 1,
+      title: 'The Hobbit',
+    }
   }
 
 }

@@ -12,18 +12,20 @@ import { selectOrders } from './store/orders.selectors';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
+
   orders$: Observable<Order[]>;
+  info$: Observable<string>;
 
   constructor(
     private store: Store,
     private coreService: NgCoreService
   ) {
     this.orders$ = this.store.select(selectOrders);
+    this.info$ = this.coreService.getInfo();
   }
 
   ngOnInit(): void {
     this.store.dispatch(getOrders());
-    console.log(this.coreService.getInfo());
   }
 
 }
