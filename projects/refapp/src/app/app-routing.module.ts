@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('@cit/ng-core/orders').then((m) => m.OrdersModule),
   },
+  {
+    path: 'books',
+    loadChildren: () => import('@cit/ng-core/books').then((m) => m.BooksModule),
+  },
 ];
 
 @NgModule({

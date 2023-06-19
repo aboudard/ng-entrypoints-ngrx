@@ -4,11 +4,15 @@
   "compilerOptions": {
     "paths": {
       "@cit/ng-core": [
-        "dist/cit/ng-core/cit-ng-core",
-        "dist/cit/ng-core"
+        "dist/ng-core/cit-ng-core",
+        "dist/ng-core"
       ],
       "@cit/ng-core/*": [
-        "dist/cit/ng-core/*"
+        "dist/ng-core/*"
+      ],
+      "ng-other": [
+        "dist/ng-other/ng-other",
+        "dist/ng-other"
       ]
     },
     "baseUrl": "./",

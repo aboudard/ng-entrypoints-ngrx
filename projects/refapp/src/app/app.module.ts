@@ -9,7 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { reducers, metaReducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
-import { StoreOrdersModule } from 'projects/cit/ng-core/orders/src/store/store-orders.module';
+import { StoreOrdersModule } from 'projects/ng-core/orders/src/store/store-orders.module';
 
 @NgModule({
   declarations: [AppComponent],

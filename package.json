@@ -4,8 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start:app": "ng serve refapp",
-    "build:core": "ng build @cit/ng-core",
-    "watch:core": "ng build @cit/ng-core --watch",
+    "build:app": "ng build refapp",
+    "build:core": "ng build ng-core",
+    "core:link": "cd dist/ng-core && npm link",
+    "other:link": "cd dist/ng-other && npm link",
+    "watch:core": "ng build ng-core --watch",
+    "watch:other": "ng build ng-other --watch",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

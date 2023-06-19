@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "@cit/ng-core": {
+    "ng-core": {
       "projectType": "library",
-      "root": "projects/cit/ng-core",
-      "sourceRoot": "projects/cit/ng-core/src",
+      "root": "projects/ng-core",
+      "sourceRoot": "projects/ng-core/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/cit/ng-core/ng-package.json"
+            "project": "projects/ng-core/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/cit/ng-core/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-core/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/cit/ng-core/tsconfig.lib.json"
+              "tsConfig": "projects/ng-core/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,9 +27,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/cit/ng-core/src/test.ts",
-            "tsConfig": "projects/cit/ng-core/tsconfig.spec.json",
-            "karmaConfig": "projects/cit/ng-core/karma.conf.js"
+            "main": "projects/ng-core/src/test.ts",
+            "tsConfig": "projects/ng-core/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-core/karma.conf.js"
           }
         }
       }
@@ -136,9 +136,40 @@
           }
         }
       }
+    },
+    "ng-other": {
+      "projectType": "library",
+      "root": "projects/ng-other",
+      "sourceRoot": "projects/ng-other/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-other/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-other/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-other/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-other/src/test.ts",
+            "tsConfig": "projects/ng-other/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-other/karma.conf.js"
+          }
+        }
+      }
     }
   },
-  "defaultProject": "@cit/ng-core",
+  "defaultProject": "ng-core",
   "cli": {
     "defaultCollection": "@ngrx/schematics"
   }

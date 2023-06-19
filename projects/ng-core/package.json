@@ -1,6 +1,9 @@
 {
-  "name": "@cit/ng-core",
+  "name": "ng-core",
   "version": "0.0.1",
+  "scripts": {
+    "core:build": "ng build ng-core"
+  },
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0"
