@@ -3,11 +3,11 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@cit/ng-core": [
+      "ng-core": [
         "dist/ng-core/cit-ng-core",
         "dist/ng-core"
       ],
-      "@cit/ng-core/*": [
+      "ng-core/*": [
         "dist/ng-core/*"
       ],
       "ng-other": [

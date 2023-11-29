@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Book } from '@cit/ng-core/books';
-import { getOrders, selectOrdersCount } from '@cit/ng-core/orders';
+import { Book } from 'ng-core/books';
+import { getOrders, selectOrdersCount } from 'ng-core/orders';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -19,7 +19,7 @@ export class AppComponent {
   constructor(
     private store: Store
   ) {
-    // Calling the ngrx components from the orders entrypoints creates a adherence and breaks the lazy loading
+    //TODO: Calling the ngrx components from the orders entrypoints creates a adherence and breaks the lazy loading
     // this.store.dispatch(getOrders());
     /* this.store.select(selectOrdersCount).subscribe(orders => {
       console.log(orders);

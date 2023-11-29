@@ -10,11 +10,11 @@ const routes: Routes = [
   {
     path: 'orders',
     loadChildren: () =>
-      import('@cit/ng-core/orders').then((m) => m.OrdersModule),
+      import('ng-core/orders').then((m) => m.OrdersModule),
   },
   {
     path: 'books',
-    loadChildren: () => import('@cit/ng-core/books').then((m) => m.BooksModule),
+    loadChildren: () => import('ng-core/books').then((m) => m.BooksModule),
   },
 ];
 
