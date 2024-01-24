@@ -4,7 +4,7 @@ This project is showing how to integrate secondary entrypoints parts of an Angul
 
 ## Build time
 
-Every secondary entrypoint has a separate build that generates a dedicated js chunk.
+Every secondary entrypoint has a separate build that generates a dedicated js chunk. When updating the code of any component, build is significantly faster since it only rebuild the small part.
 
 ## Load time
 
@@ -16,6 +16,15 @@ When needed, we can load such a module with a route, it will be lazy loaded.
     loadChildren: () =>
       import('ng-core/orders').then((m) => m.OrdersModule),
   },
+```
+
+If working with standalone components, it could look like this :
+
+```typescript
+{
+    path: 'books',
+    loadChildren: () => import('ng-core/books').then((m) => m.booksRoutes),
+},
 ```
 
 ## Code interactions
