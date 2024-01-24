@@ -2,6 +2,15 @@
 
 This project is showing how to integrate secondary entrypoints parts of an Angular Library with NgRx Store within lazy loaded Modules.
 
+## Basic imports
+
+Secondary entrypoints are very used by libraries, as they allow to separate imports of the components exposed by the library.
+A simple interface can benefit from this with better imports :
+
+```typescript
+import { Book } from 'mylib/books';
+```
+
 ## Build time
 
 Every secondary entrypoint has a separate build that generates a dedicated js chunk. When updating the code of any component, build is significantly faster since it only rebuild the small part.
