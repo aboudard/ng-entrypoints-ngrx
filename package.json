@@ -7,6 +7,7 @@
     "build:app": "ng build refapp",
     "build:core": "ng build ng-core",
     "build:other": "ng build ng-other",
+    "build:pages": "npm run build:core && npm run build:other && ng build refapp --configuration production --base-href /ng-entrypoints-ngrx/",
     "core:link": "cd dist/ng-core && npm link",
     "other:link": "cd dist/ng-other && npm link",
     "watch:core": "ng build ng-core --watch",
