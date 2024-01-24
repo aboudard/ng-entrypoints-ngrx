@@ -4,11 +4,11 @@ import * as OrdersActions from './orders.actions';
 
 export const ordersFeatureKey = 'orderstore';
 
-export interface State {
+export interface OrdersState {
   orders: Order[];
 }
 
-export const initialState: State = {
+export const initialState: OrdersState = {
   orders: []
 };
 

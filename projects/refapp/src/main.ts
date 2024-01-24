@@ -18,9 +18,20 @@ if (environment.production) {
 }
 
 bootstrapApplication(AppComponent, {
-    providers: [importProvidersFrom(NgCoreModule, BrowserModule, AppRoutingModule, StoreDevtoolsModule.instrument({
+    providers: [
+      importProvidersFrom(
+        NgCoreModule,
+        BrowserModule,
+        AppRoutingModule,
+        StoreDevtoolsModule.instrument({
             maxAge: 25,
             logOnly: environment.production,
-        }), StoreModule.forRoot(reducers, { metaReducers }), EffectsModule.forRoot([]), StoreOrdersModule, !environment.production ? StoreDevtoolsModule.instrument() : [])]
+        }),
+        StoreModule.forRoot(reducers, { metaReducers }),
+        EffectsModule.forRoot([]),
+        StoreOrdersModule,
+        !environment.production ? StoreDevtoolsModule.instrument() : []
+        )
+      ]
 })
   .catch(err => console.error(err));
