@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'books',
-    loadChildren: () => import('ng-core/books').then((m) => m.BooksModule),
+    loadChildren: () => import('ng-core/books').then((m) => m.booksRoutes),
   },
 ];
 

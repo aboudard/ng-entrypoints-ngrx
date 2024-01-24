@@ -10,14 +10,12 @@ import { UsersEffects } from './store/users.effects';
 
 
 @NgModule({
-  declarations: [
-    UsersComponent
-  ],
-  imports: [
-    CommonModule,
-    UsersRoutingModule,
-    StoreModule.forFeature(fromUsers.usersFeatureKey, fromUsers.reducer),
-    EffectsModule.forFeature([UsersEffects])
-  ]
+    imports: [
+        CommonModule,
+        UsersRoutingModule,
+        StoreModule.forFeature(fromUsers.usersFeatureKey, fromUsers.reducer),
+        EffectsModule.forFeature([UsersEffects]),
+        UsersComponent
+    ]
 })
 export class UsersModule { }

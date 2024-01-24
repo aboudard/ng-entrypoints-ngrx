@@ -8,8 +8,8 @@ describe('NgOtherComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgOtherComponent ]
-    })
+    imports: [NgOtherComponent]
+})
     .compileComponents();
   });
 

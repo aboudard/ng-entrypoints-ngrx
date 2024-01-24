@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-ng-other',
-  template: `
+    selector: 'lib-ng-other',
+    template: `
     <p>
       ng-other works!
     </p>
   `,
-  styles: [
-  ]
+    styles: [],
+    standalone: true
 })
 export class NgOtherComponent implements OnInit {
 

@@ -3,11 +3,16 @@ import { Book } from 'ng-core/books';
 import { getOrders, selectOrdersCount } from 'ng-core/orders';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
+import { NgCoreComponent } from 'ng-core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: true,
+    imports: [RouterLink, NgCoreComponent, RouterOutlet, AsyncPipe]
 })
 export class AppComponent {
   

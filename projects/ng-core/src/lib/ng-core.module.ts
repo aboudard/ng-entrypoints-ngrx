@@ -9,17 +9,16 @@ import { NgCoreService } from './ng-core.service';
 
 
 @NgModule({
-  declarations: [
-    NgCoreComponent
-  ],
-  imports: [
-  StoreModule.forFeature(fromCore.coreFeatureKey, fromCore.reducer),
-  EffectsModule.forFeature([CoreEffects])],
-  exports: [
-    NgCoreComponent
-  ],
-  providers: [
-    NgCoreService
-  ]
+    imports: [
+        StoreModule.forFeature(fromCore.coreFeatureKey, fromCore.reducer),
+        EffectsModule.forFeature([CoreEffects]),
+        NgCoreComponent
+    ],
+    exports: [
+        NgCoreComponent
+    ],
+    providers: [
+        NgCoreService
+    ]
 })
 export class NgCoreModule { }

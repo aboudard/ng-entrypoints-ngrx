@@ -5,11 +5,15 @@ import { Observable } from 'rxjs';
 import { Order } from './dto/order';
 import { getOrders } from './store/orders.actions';
 import { selectOrders } from './store/orders.selectors';
+import { RouterLink } from '@angular/router';
+import { NgFor, AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'lib-orders',
-  templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css']
+    selector: 'lib-orders',
+    templateUrl: './orders.component.html',
+    styleUrls: ['./orders.component.css'],
+    standalone: true,
+    imports: [NgFor, RouterLink, AsyncPipe]
 })
 export class OrdersComponent implements OnInit {
 

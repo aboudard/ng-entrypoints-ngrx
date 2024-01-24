@@ -6,13 +6,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [NgOtherComponent],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    StoreModule.forFeature(fromOther.otherFeatureKey, fromOther.reducers),
-  ],
-  exports: [NgOtherComponent],
+    imports: [
+        BrowserModule,
+        CommonModule,
+        StoreModule.forFeature(fromOther.otherFeatureKey, fromOther.reducers),
+        NgOtherComponent,
+    ],
+    exports: [NgOtherComponent],
 })
 export class NgOtherModule {
 
