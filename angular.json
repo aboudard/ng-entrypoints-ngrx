@@ -51,7 +51,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/refapp",
+            "outputPath": "dist/ng-entrypoints-ngrx",
             "index": "projects/refapp/src/index.html",
             "main": "projects/refapp/src/main.ts",
             "polyfills": "projects/refapp/src/polyfills.ts",
